@@ -8,12 +8,13 @@ public class num2 {
             num = in.nextDouble();
             while (num <= 0) {
                 System.out.println("wrong number. Input another");
+                in.nextLine;
                 num = getDouble(num, in);
             }
         }
         else {
             System.out.println("it;s not a double number. Input double number.");
-            String tmp = in.nextLine();
+            in.nextLine();
             num = getDouble(num, in);
         }
 
@@ -55,7 +56,7 @@ public class num2 {
         b = getDouble(b, input);
         c = getDouble(c, input);
 
-        if(ifTriangle(a, b, c))
+        if(!ifTriangle(a, b, c))
             System.out.println("It's not triangle. Shutting down the programm...");
         else {
             double p = (a + b + c) / 2;
